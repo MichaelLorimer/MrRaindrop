@@ -26,12 +26,11 @@ public class HeadController : MonoBehaviour
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D col)
+	void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "Rain") 
 		{
-			//PlayHurtAnimation (randomly pick one) 
-			//RemoveLife
+			GameManagerScript.RemoveDrop ();
 		}
 	}
 }
