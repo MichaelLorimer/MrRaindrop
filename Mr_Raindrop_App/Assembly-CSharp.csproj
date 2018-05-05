@@ -55,6 +55,8 @@
      <Compile Include="Assets\_Scripts\HeadController.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\RainController.cs" />
+     <Compile Include="Assets\_Scripts\StartScreenScript.cs" />
+     <None Include="Assets\Pixel Font - Tripfive\_README.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Nibbcity/Documents/GitHub/MrRaindrop/Mr_Raindrop_App/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

@@ -8,6 +8,7 @@ public class RainController : MonoBehaviour
 
 	Rigidbody2D RainRB;
 	Animator    RainAnimator;
+	CircleCollider2D CirCol;
 
 	Animation anim;
 
@@ -18,6 +19,7 @@ public class RainController : MonoBehaviour
 	{
 		RainRB = GetComponent<Rigidbody2D>();
 		RainAnimator = GetComponent<Animator>();
+		CirCol = GetComponent<CircleCollider2D> ();
 		alive = true;
 	}
 	
@@ -29,17 +31,25 @@ public class RainController : MonoBehaviour
 		RainRB.position = CurrentPos;
 	}
 
+	//Collides with 2 object so
 	void OnCollisionEnter2D(Collision2D col)
 	{
+
+		if (col.gameObject.tag == "Player" || col.gameObject.tag == "MrRaindrop") 
+		{
+			CirCol.enabled = false;
+			RainAnimator.SetBool ("Dead", true);
+			GameManagerScript.RemoveDrop ();
+			Destroy (this.gameObject, 0.13f);
+		}
+
 		if (col.gameObject.tag == "Player") 
 		{
-			RainAnimator.SetBool ("Dead", true);
-			Destroy (this.gameObject, 0.13f);
+			GameManagerScript.score++;
 		}
 		if (col.gameObject.tag == "MrRaindrop") 
 		{
-			RainAnimator.SetBool ("Dead", true);
-			Destroy (this.gameObject, 0.13f);
+			GameManagerScript.wetness++;
 		}
 	}
 }

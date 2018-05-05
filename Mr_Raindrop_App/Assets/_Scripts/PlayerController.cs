@@ -37,7 +37,8 @@ public class PlayerController : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Rain") 
 		{
-			GameManagerScript.RemoveDrop ();
+			//Add to score
+			//GameManagerScript.RemoveDrop ();
 		}
 	}
 }

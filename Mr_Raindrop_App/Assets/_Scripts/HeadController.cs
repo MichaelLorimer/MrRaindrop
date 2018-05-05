@@ -30,7 +30,8 @@ public class HeadController : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Rain") 
 		{
-			GameManagerScript.RemoveDrop ();
+			// add to wet 
+			//GameManagerScript.RemoveDrop ();
 		}
 	}
 }
