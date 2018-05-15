@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	{
 		HatRB = GetComponent<Rigidbody2D> (); // Get and store the players RigidBody
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{

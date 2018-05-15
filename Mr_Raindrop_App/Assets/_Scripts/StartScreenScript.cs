@@ -20,4 +20,23 @@ public class StartScreenScript : MonoBehaviour
 		Debug.Log ("OptionsMenu");
 	}
 
+	public void VolumeToggle()
+	{
+		Debug.Log ("VolumeOff");
+	}
+
+	public void Facebookbuttpn()
+	{
+		Debug.Log ("Share to facebook");
+	}
+
+	public void TwitterButton()
+	{
+		Debug.Log ("ShareToTwitter");
+	}
+
+	public void GooglePlayButton()
+	{
+		Debug.Log ("GooglePlayButton");
+	}
 }

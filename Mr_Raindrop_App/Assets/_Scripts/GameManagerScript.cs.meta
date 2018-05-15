@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 053b3469abfe6544787910b72bbcbf63
-timeCreated: 1524739128
+timeCreated: 1526231661
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - prefab: {fileID: 1320355815608416, guid: ed07bb4e694a6bb44b4b5c3371920f4b, type: 2}
+  - scoreText: {instanceID: 0}
+  - wetText: {instanceID: 0}
+  - WetnessSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

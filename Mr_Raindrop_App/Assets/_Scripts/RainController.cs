@@ -22,7 +22,7 @@ public class RainController : MonoBehaviour
 		CirCol = GetComponent<CircleCollider2D> ();
 		alive = true;
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -34,13 +34,12 @@ public class RainController : MonoBehaviour
 	//Collides with 2 object so
 	void OnCollisionEnter2D(Collision2D col)
 	{
-
 		if (col.gameObject.tag == "Player" || col.gameObject.tag == "MrRaindrop") 
 		{
 			CirCol.enabled = false;
 			RainAnimator.SetBool ("Dead", true);
-			GameManagerScript.RemoveDrop ();
-			Destroy (this.gameObject, 0.13f);
+			speed = 0f;
+			Destroy (this.gameObject, 0.4f);
 		}
 
 		if (col.gameObject.tag == "Player") 

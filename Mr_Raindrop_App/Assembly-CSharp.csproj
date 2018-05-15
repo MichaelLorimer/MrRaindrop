@@ -51,8 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\ChangeButtonImage.cs" />
      <Compile Include="Assets\_Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\_Scripts\HeadController.cs" />
+     <Compile Include="Assets\_Scripts\MMRain.cs" />
+     <Compile Include="Assets\_Scripts\MMRainController.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\RainController.cs" />
      <Compile Include="Assets\_Scripts\StartScreenScript.cs" />
