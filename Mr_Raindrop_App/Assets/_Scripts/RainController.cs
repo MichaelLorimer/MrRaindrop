@@ -10,17 +10,12 @@ public class RainController : MonoBehaviour
 	Animator    RainAnimator;
 	CircleCollider2D CirCol;
 
-	Animation anim;
-
-	bool alive;
-
 	// Use this for initialization
 	void Start () 
 	{
 		RainRB = GetComponent<Rigidbody2D>();
 		RainAnimator = GetComponent<Animator>();
 		CirCol = GetComponent<CircleCollider2D> ();
-		alive = true;
 	}
 
 	// Update is called once per frame
@@ -39,7 +34,8 @@ public class RainController : MonoBehaviour
 			CirCol.enabled = false;
 			RainAnimator.SetBool ("Dead", true);
 			speed = 0f;
-			Destroy (this.gameObject, 0.4f);
+			GameManagerScript.RemoveDrop ();
+			Destroy (this.gameObject, 0.2f);
 		}
 
 		if (col.gameObject.tag == "Player") 

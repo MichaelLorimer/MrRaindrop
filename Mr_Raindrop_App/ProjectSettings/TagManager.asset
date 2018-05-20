@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MrRaindrop
   - Rain
+  - Coin
   layers:
   - Default
   - TransparentFX

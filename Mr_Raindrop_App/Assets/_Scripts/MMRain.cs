@@ -32,9 +32,9 @@ public class MMRain : MonoBehaviour
 		if (col.gameObject.tag == "MrRaindrop") 
 		{
 			CirCol.enabled = false;
-			MMRainController.RemoveDrop ();
 			RainAnimator.SetBool ("Dead", true);
 			speed = 0f;
+			MMRainController.RemoveDrop ();
 			Destroy (this.gameObject, 0.2f);
 		}
 	}

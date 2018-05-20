@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ using UnityEngine.UI;
 public class GameManagerScript : MonoBehaviour 
 {
 	public GameObject prefab; //Store the rainprefab
+	public GameObject CoinPrefab; //Store the rainprefab
 
 	public static int NumDrops; // Number of drops 
 	public static int MaxNumDrop = 5;
@@ -14,17 +16,19 @@ public class GameManagerScript : MonoBehaviour
 	public static int score; //Current Score
 	public static int wetness;//Current Wetnesslevel 
 
+	public static int CoinScore;
+
 	public Text scoreText; // Holds ref to GUIText Compnenet
 	public Text wetText; // Holds ref to GUIText Compnenet -- Temp --
+	public Text CoinText; // Holds ref to GUIText Compnenet -- Temp --
 	public Slider WetnessSlider;
 
-	public int goldDrops;
 	// Use this for initialization
 	void Start ()
 	{
-		goldDrops = 0;
+		CoinScore = 0;
 		
-		NumDrops = 0; //Set Default valueof0 uponsarting the game 
+		NumDrops = 5; //Set Default valueof0 uponsarting the game 
 
 		score = 0; //Set Default valueof0 uponsarting thegame 
 		wetness = 0; //Set Default valueof0 uponsarting thegame 
@@ -47,6 +51,7 @@ public class GameManagerScript : MonoBehaviour
 
 
 		scoreText.text = "" + score; // Display score 
+		CoinText.text = "" + CoinScore; // Display score 
 		wetText.text = "" + wetness; // Display score 
 		WetnessSlider.value = wetness;
 	}
@@ -58,6 +63,6 @@ public class GameManagerScript : MonoBehaviour
 
 	void AddGold()
 	{
-		goldDrops++;
+		CoinScore++;
 	}
 }

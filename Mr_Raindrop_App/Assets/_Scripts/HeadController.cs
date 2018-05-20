@@ -5,25 +5,40 @@ using UnityEngine;
 public class HeadController : MonoBehaviour 
 {
 	// -- Animations --
-	Animation HurtAnim1;
-	Animation HurtAnim2;
-	Animation HurtAnim3;
+	public Sprite Default;
+	public Sprite HitLeft;
+	public Sprite HitRight;
+	public Sprite HitMid;
 
-	Animation AmbientAnim; //Looking around n such 
+	SpriteRenderer SpritRend; //Looking around n such 
 
-	//Lives 
-
+	public float HitTimer;
+	public bool isHit = false;
 	// Could Use GameController
 	// Use this for initialization
 	void Start () 
 	{
-		
+		SpritRend = GetComponent<SpriteRenderer>();
+		HitTimer = 0f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		
+
+		//hit timer forsprite change
+		if (isHit == true) 
+		{
+			
+			HitTimer += Time.deltaTime;
+
+			if (HitTimer >= 0.5f) 
+			{
+				HitTimer = 0f;
+				isHit = false;
+				SpritRend.sprite = Default;
+			}
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
@@ -32,6 +47,22 @@ public class HeadController : MonoBehaviour
 		{
 			// add to wet 
 			//GameManagerScript.RemoveDrop ();
+			int i = 0;
+			i = Random.Range (0, 4);
+
+			if (i == 0) 
+			{
+				SpritRend.sprite = HitLeft;
+			}
+			if (i == 2) 
+			{
+				SpritRend.sprite = HitMid;
+			}
+			if (i == 3) 
+			{
+				SpritRend.sprite = HitRight;
+			}
 		}
+		isHit = true;
 	}
 }

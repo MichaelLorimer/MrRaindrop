@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\ChangeButtonImage.cs" />
+     <Compile Include="Assets\_Scripts\CoinController.cs" />
      <Compile Include="Assets\_Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\_Scripts\HeadController.cs" />
      <Compile Include="Assets\_Scripts\MMRain.cs" />

@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4611920447342734}
   - component: {fileID: 212755195615095260}
-  - component: {fileID: 114209398485784786}
   - component: {fileID: 50080065931285696}
   - component: {fileID: 58229731279263796}
   - component: {fileID: 95689841289045794}
+  - component: {fileID: 114989031169749800}
   m_Layer: 0
   m_Name: RainSprite
   m_TagString: Rain
@@ -125,7 +125,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114209398485784786
+--- !u!114 &114989031169749800
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
