@@ -28,7 +28,7 @@ public class GameManagerScript : MonoBehaviour
 	{
 		CoinScore = 0;
 		
-		NumDrops = 5; //Set Default valueof0 uponsarting the game 
+		NumDrops = 0; //Set Default valueof0 uponsarting the game 
 
 		score = 0; //Set Default valueof0 uponsarting thegame 
 		wetness = 0; //Set Default valueof0 uponsarting thegame 
