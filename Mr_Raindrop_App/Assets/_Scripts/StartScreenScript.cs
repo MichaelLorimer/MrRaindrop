@@ -25,7 +25,7 @@ public class StartScreenScript : MonoBehaviour
 		Debug.Log ("VolumeOff");
 	}
 
-	public void Facebookbuttpn()
+	public void Facebookbutton()
 	{
 		Debug.Log ("Share to facebook");
 	}
