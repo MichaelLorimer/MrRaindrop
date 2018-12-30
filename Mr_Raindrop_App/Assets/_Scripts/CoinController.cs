@@ -34,7 +34,7 @@ public class CoinController : MonoBehaviour
 			BoxCol.enabled = false;
 			CoinAnimator.SetBool ("Dead", true);
 			speed = 0f;
-			GameManagerScript.RemoveDrop ();
+			GameManagerScript.RemoveCoin ();
 			Destroy (this.gameObject, 0.2f);
 		}
 

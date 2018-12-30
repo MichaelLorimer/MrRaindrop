@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKey (KeyCode.A)) 
+		/*if (Input.GetKey (KeyCode.A)) 
 		{
 			Vector2 CurrentPos = HatRB.position;
 			CurrentPos.x -= speed * Time.deltaTime;
@@ -30,7 +30,15 @@ public class PlayerController : MonoBehaviour
 			Vector2 CurrentPos = HatRB.position;
 			CurrentPos.x += speed * Time.deltaTime;
 			HatRB.position = CurrentPos;
-		}
+		}*/
+
+        if(Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+            touchPos.y = HatRB.position.y;
+            HatRB.position = touchPos;
+        }
 	}
 
 	void OnCollisionEnter2D(Collision2D col)

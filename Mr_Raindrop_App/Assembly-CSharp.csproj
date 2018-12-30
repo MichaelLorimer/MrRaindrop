@@ -65,6 +65,7 @@
     <Compile Include="Assets\_Scripts\CoinController.cs" />
     <Compile Include="Assets\_Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\_Scripts\HeadController.cs" />
+    <Compile Include="Assets\_Scripts\MainCameraScript.cs" />
     <Compile Include="Assets\_Scripts\MMRain.cs" />
     <Compile Include="Assets\_Scripts\MMRainController.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />

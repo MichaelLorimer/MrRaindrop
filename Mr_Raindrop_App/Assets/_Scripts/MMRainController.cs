@@ -21,7 +21,7 @@ public class MMRainController : MonoBehaviour
 		//SpawnDrops
 		if (numDrops < maxNumDrops)
 		{
-			Vector2 SpawnPos = new Vector2 (Random.Range (-3.4f, 3.5f), 6f); //Chose a spawnpoint in a random range
+			Vector2 SpawnPos = new Vector2 (Random.Range (-2.8f, 2.8f), 6f); //Chose a spawnpoint in a random range
 			Instantiate (prefab, SpawnPos, Quaternion.identity); //Create the prefab oncea position ischosen
 			//Check if golden drop 1/100
 			drop = numDrops;
