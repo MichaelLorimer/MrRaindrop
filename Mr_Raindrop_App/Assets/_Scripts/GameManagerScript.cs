@@ -47,7 +47,7 @@ public class GameManagerScript : MonoBehaviour
 		if (NumDrops < MaxNumDrop)
 		{
 			Vector2 SpawnPos = new Vector2 (Random.Range (-2.9f, 2.79f), 6f); //Chose a spawnpoint in a random range
-			Instantiate (SnowPrefab, SpawnPos, Quaternion.identity); //Create the prefab oncea position ischosen
+			Instantiate (prefab, SpawnPos, Quaternion.identity); //Create the prefab oncea position ischosen
 			//Check if golden drop 1/100
 
 			NumDrops++;// Incriment theamount of drops that exist

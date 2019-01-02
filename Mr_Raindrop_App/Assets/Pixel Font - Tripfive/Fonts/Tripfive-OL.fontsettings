@@ -3,7 +3,7 @@
 --- !u!128 &12800000
 Font:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Tripfive-OL
   serializedVersion: 5
@@ -1547,3 +1547,4 @@ Font:
   m_FallbackFonts: []
   m_FontRenderingMode: 0
   m_UseLegacyBoundsCalculation: 0
+  m_ShouldRoundAdvanceValue: 1
