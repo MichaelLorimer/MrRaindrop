@@ -14,6 +14,7 @@ public class MMRainController : MonoBehaviour
 	{
 		numDrops = 0;
 		maxNumDrops = 5;
+        Time.timeScale = 1f;
 	}
 
 	void Update()

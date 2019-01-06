@@ -12,10 +12,21 @@ public class StartScreenScript : MonoBehaviour
 	public void QuitGame()
 	{
 		Debug.Log ("Game Closed");
+        //Confirm quit here --
 		Application.Quit ();
 	}
 
-	public void OpenOptions()
+    public void ReturnToMinMenu()
+    {
+        SceneManager.LoadScene("StartScreen");
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
+    public void OpenOptions()
 	{
 		Debug.Log ("OptionsMenu");
 	}
@@ -39,4 +50,24 @@ public class StartScreenScript : MonoBehaviour
 	{
 		Debug.Log ("GooglePlayButton");
 	}
+
+    public void InformationPlayButton()
+    {
+        Debug.Log("GooglePlayButton");
+    }
+
+    public void PatreonPlayButton()
+    {
+        Debug.Log("GooglePlayButton");
+    }
+
+    public void KoFiButton()
+    {
+        Debug.Log("GooglePlayButton");
+    }
+
+    public void GooglePlayRateButton()
+    {
+        Debug.Log("GooglePlayButton");
+    }
 }

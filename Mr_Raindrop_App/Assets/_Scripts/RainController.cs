@@ -44,7 +44,7 @@ public class RainController : MonoBehaviour
 		}
 		if (col.gameObject.tag == "MrRaindrop") 
 		{
-			GameManagerScript.wetness++;
+			GameManagerScript.CurrentHealth--;
 		}
 	}
 }
