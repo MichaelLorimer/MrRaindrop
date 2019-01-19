@@ -33,6 +33,12 @@ public class GameManagerScript : MonoBehaviour
     public Text CoinText; // Holds ref to GUIText Compnenet -- Temp --
     public Slider HealthSlider;
 
+    float halfHeight;
+    float halfwidth;
+
+    float minSpawn;
+    float maxSpawn;
+
     // Use this for initialization
     void Start()
     {
@@ -46,6 +52,15 @@ public class GameManagerScript : MonoBehaviour
         NumDrops = 0; //Set Default valueof0 uponsarting the game 
 
         score = 0; //Set Default valueof0 uponsarting thegame 
+
+        SaveAndLoad.LoadFile();
+
+
+        halfHeight = Camera.main.orthographicSize;
+        halfwidth = Camera.main.aspect * halfHeight;
+
+        minSpawn = -(halfwidth -= 0.5f);
+        maxSpawn = (halfwidth += 0.5f);
     }
 
     // Update is called once per frame
@@ -53,7 +68,7 @@ public class GameManagerScript : MonoBehaviour
     {
         if (NumDrops < MaxNumDrop)
         {
-            Vector2 SpawnPos = new Vector2(Random.Range(-2.9f, 2.79f), 6f); //Chose a spawnpoint in a random range
+            Vector2 SpawnPos = new Vector2(Random.Range(minSpawn, maxSpawn), 6f); //Chose a spawnpoint in a random range
             Instantiate(prefab, SpawnPos, Quaternion.identity); //Create the prefab oncea position ischosen
                                                                 //Check if golden drop 1/100
 
@@ -66,7 +81,7 @@ public class GameManagerScript : MonoBehaviour
             rng = (Random.Range(0.0f, 1.0f));
             if (rng <= CoinChance)
             {
-                Vector2 SpawnPos = new Vector2(Random.Range(-2.9f, 2.79f), 6f); //Chose a spawnpoint in a random range
+                Vector2 SpawnPos = new Vector2(Random.Range(minSpawn, maxSpawn), 6f); //Chose a spawnpoint in a random range
                 Instantiate(CoinPrefab, SpawnPos, Quaternion.identity); //Create the prefab oncea position ischosen
                 coinSpawned = true;
             }
@@ -108,6 +123,7 @@ public class GameManagerScript : MonoBehaviour
         GameOverMenu.SetActive(true);
         PlayerUI.SetActive(false);
         PauseGame();
+        SaveAndLoad.SaveFile();
     }
 
     void PauseGame()
